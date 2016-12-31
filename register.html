@@ -22,7 +22,7 @@
             }
             #submit {
                 background-color: red;
-                width: 15%;
+                width: 25%;
                 height: 30px;
                 color: white;
                 border: none;
@@ -37,10 +37,8 @@
     </head>
     <body>
     <header>
-        <br />
-        <img src="resources/hilti_logo.png" style="float:right">
-        <h2 style="margin-left: 151px">H-Laser</h2>
-        <br />
+        <img src="resources/hilti_logo.png" style="float:right" style="height:5%;width:5%">
+        <h2>H-Laser</h2>
     </header>
     <h2>Registration</h2>
     <form method="post" onsubmit="return validateForm()" action="index.html">
@@ -80,7 +78,6 @@
                 </tr>
             </table>
         </div>
-        <p id="error"></p>
         <br/>
         <input type="submit" name="submit" id="submit" value="Submit">
     </form>
@@ -111,7 +108,7 @@
              return true;
          }
          else {
-             document.getElementById('error').innerHTML = alerts;
+             alert(alerts);
              return false;
          }
         }

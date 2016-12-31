@@ -1,12 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: tanzs
- * Date: 27/12/2016
- * Time: 3:21
- */
-?>
-
 <html>
     <head>
         <title>H-Laser System - Feedback</title>
@@ -22,7 +13,7 @@
             }
             #submit {
                 background-color: red;
-                width: 15%;
+                width: 25%;
                 height: 30px;
                 color: white;
                 border: none;
@@ -36,21 +27,15 @@
         </style>
     </head>
     <body>
-    <header>
-        <br />
-        <a href="main.html"><img src="resources/hilti_logo.png" style="float:right"></a>
-        <h2 style="margin-left: 151px">H-Laser</h2>
-        <br />
-    </header>
+		<header>
+			<img src="resources/hilti_logo.png" style="float:right" style="height:5%;width:5%">
+			<h2>H-Laser</h2>
+		</header>
     <h2>Registration</h2>
     <form method="post" onsubmit="return validateForm()">
         <div class="register">
-            <textarea name="comment" id="comment" rows="5" cols="50"
-                      style="resize: none;text-align: left;font-size: 12px">
-
-            </textarea>
+            <textarea name="comment" id="comment" rows="5" cols="40" style="resize: none;text-align: left;font-size: 12px"></textarea>
         </div>
-        <p id="error"></p>
         <p>For more information,please visit :</p>
         <a href="https://us.hilti.com">https://us.hilti.com</a>
         <br/>
@@ -71,7 +56,7 @@
              return true;
          }
          else {
-             document.getElementById('error').innerHTML = alerts;
+             alert(alerts);
              return false;
          }
         }
