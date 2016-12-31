@@ -1,0 +1,91 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: tanzs
+ * Date: 27/12/2016
+ * Time: 2:07
+ */
+
+?>
+<html>
+    <head>
+        <title>H-Laser System - Dashboard</title>
+        <style>
+            body {
+                background-color: #29323F;
+                color: white;
+                text-align: center;
+            }
+            header {
+                background-color: red;
+                width: 100%;
+            }
+            div {
+                text-align: center;
+                border: 1px solid white;
+            }
+            div.button a:link {
+                display: block;
+                text-decoration: none;
+                color:white;
+            }
+            div.button a:visited {
+                display: block;
+                text-decoration: none;
+                color:white;
+            }
+            div.button a:active {
+                display: block;
+                text-decoration: none;
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <br />
+            <a href="main.html"><img src="resources/hilti_logo.png" style="float:right"></a>
+            <h2 style="margin-left: 151px">H-Laser</h2>
+            <br />
+        </header>
+        <h2>Welcome,</h2>
+        <img src="resources/username.png" style="width:95px;height: 95px">
+        <h2 id="username">Admin</h2>
+        <p>Choose a category to perform a task</p>
+        <br/>
+        <div style="display: table; width: 100%">
+            <div style="display: table-row">
+                <div class="button" style="display: table-cell">
+                    <a href="measure.html">
+                        <img src="resources/measure_img.png">
+                        <h3>Measure</h3>
+                        <p>2 devices connected</p>
+                    </a>
+                </div>
+                <div class="button" style="display: table-cell">
+                    <a href="device_status.html">
+                        <img src="resources/status_img.png">
+                        <h3>Status</h3>
+                        <p>Check device status</p>
+                    </a>
+                </div>
+            </div>
+            <div style="display: table-row">
+                <div class="button" style="display: table-cell">
+                    <a href="add_device.html">
+                        <img src="resources/add_img.png">
+                        <h3>Add Device</h3>
+                        <p>Newly purchased device register here</p>
+                    </a>
+                </div>
+                <div class="button" style="display: table-cell">
+                    <a href="feedback.html">
+                        <img src="resources/feedback_img.png">
+                        <h3>Feedback</h3>
+                        <p>Share your complains and suggestion</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

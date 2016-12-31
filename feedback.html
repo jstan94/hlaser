@@ -1,0 +1,80 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: tanzs
+ * Date: 27/12/2016
+ * Time: 3:21
+ */
+?>
+
+<html>
+    <head>
+        <title>H-Laser System - Feedback</title>
+        <style>
+            body {
+                background-color: #29323F;
+                color: white;
+                text-align: center;
+            }
+            header {
+                background-color: red;
+                width: 100%;
+            }
+            #submit {
+                background-color: red;
+                width: 15%;
+                height: 30px;
+                color: white;
+                border: none;
+                font-size: 16px;
+            }
+            div.register {
+                border: 1px solid red;
+                text-align: center;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+    <header>
+        <br />
+        <a href="main.html"><img src="resources/hilti_logo.png" style="float:right"></a>
+        <h2 style="margin-left: 151px">H-Laser</h2>
+        <br />
+    </header>
+    <h2>Registration</h2>
+    <form method="post" onsubmit="return validateForm()">
+        <div class="register">
+            <textarea name="comment" id="comment" rows="5" cols="50"
+                      style="resize: none;text-align: left;font-size: 12px">
+
+            </textarea>
+        </div>
+        <p id="error"></p>
+        <p>For more information,please visit :</p>
+        <a href="https://us.hilti.com">https://us.hilti.com</a>
+        <br/>
+
+        <input type="submit" name="submit" id="submit" value="Submit">
+    </form>
+    <script>
+        function validateForm(){
+         var comment = document.getElementById("comment").value;
+         var alerts = "";
+
+         if (comment == null || comment == ""){
+             alerts = "The feedback must be filled in order to send out.";
+         }
+
+         if (alerts == "") {
+             alert("Feedback sent.");
+             return true;
+         }
+         else {
+             document.getElementById('error').innerHTML = alerts;
+             return false;
+         }
+        }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>H-Laser System - Add Device</title>
+        <style>
+            body {
+                background-color: #29323F;
+                color: white;
+                text-align: center;
+            }
+            header {
+                background-color: red;
+                width: 100%;
+            }
+            #submit {
+                background-color: red;
+                width: 15%;
+                height: 30px;
+                color: white;
+                border: none;
+                font-size: 16px;
+            }
+            div.register {
+                border: 1px solid red;
+                text-align: center;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+    <header>
+        <br />
+        <a href="main.html"><img src="resources/hilti_logo.png" style="float:right"></a>
+        <h2 style="margin-left: 151px">H-Laser</h2>
+        <br />
+    </header>
+    <h2>Add Device</h2>
+    <p>Enter your desired device name and given device ID.</p>
+    <form method="post" onsubmit="return validateForm()">
+        <div class="register">
+            <table align="center">
+                <tr>
+                    <td>
+                        <label>Device Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="devicename" id="devicename">
+                    </td>
+                </tr>
+                <tr>
+                <td>
+                    <label>Device ID:</label>
+                </td>
+                <td>
+                    <input type="text" name="deviceid" id="deviceid">
+                </td>
+                </tr>
+            </table>
+        </div>
+        <p id="error"></p>
+        <br/>
+        <input type="submit" name="submit" id="submit" value="Add Device">
+    </form>
+    <script>
+        function validateForm(){
+         var devicename = document.getElementById("devicename").value;
+         var deviceid = document.getElementById("deviceid").value;
+         var alerts = "";
+
+         if (devicename == null || devicename == ""){
+             alerts += "The device name is required.\r";
+         }
+         if (deviceid == null || deviceid == ""){
+             alerts += "The device ID is required.\r";
+         }
+
+         if (alerts == "") {
+             alert("Device "+ devicename +"("+ deviceid +") is successfully added.")
+             return true;
+         }
+         else {
+             document.getElementById('error').innerHTML = alerts;
+             return false;
+         }
+        }
+    </script>
+    </body>
+</html>

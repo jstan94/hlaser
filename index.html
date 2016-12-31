@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        #title{
+            margin: 0 auto;
+            width: 20%;
+            text-align: center;
+            background-color: #ff0000;
+            color: #ffffff;
+        }
+        body {
+            background-image: url(resources/login_bg.png);
+            text-align: center;
+            color: white;
+        }
+        #submit {
+            background-color: red;
+            width: 15%;
+            height: 30px;
+            color: white;
+            border: none;
+            font-size: 16px;
+        }
+        #recover {
+            color: white;
+        }
+        #register {
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">H-Laser System</h1>
+    <img src="resources/hilti_logo.png" style="display: block;margin: 5px auto">
+    <br />
+    <br />
+    <br />
+    <div style="text-align: center">
+        <form method="post" name="login" id="login">
+            <img src="resources/username.png">
+            <input type="text" name="username" id="username" placeholder="Username">
+            <br/>
+            <img src="resources/password.png">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <br/>
+            <br />
+            <input type="submit" name="submit" id="submit" value="Login">
+        </form>
+    </div>
+    <p id="error"></p>
+    <br/>
+    <a href="#" id="recover">Forgot Your Password?</a>
+    <br>
+    <br>
+    <p>Don't have account? <a href="register.html" id="register">Sign Up</a></p>
+    <script>
+
+    </script>
+</body>
+</html>
